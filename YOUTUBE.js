@@ -27,7 +27,7 @@ while (letras !== -1){
 
 return letras;
 }
-//ContarCantidadRepeticiones();
+ContarCantidadRepeticiones();
 
 // 7) Programa una función que valide si una palabra o frase dada, es un
 //  palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
@@ -125,4 +125,257 @@ if(unidad === "C"){
     return ($(grados)°F = $(Math.round((grados -32) * (5/9))°C));
 }
 }
+
+// 15) Programa una función para convertir números de base binaria 
+// a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
+
+
+// 16) Programa una función que devuelva el monto final después de 
+// aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20)
+//  devolverá 800.
+function aplicarDescuento (monto,descuento){
+    return (${monto} - ${descuento}% = $${monto - ((monto*descuento)/100)})
+}
+aplicarDescuento();
+
+// 17) Programa una función que dada una fecha válida determine 
+// cuantos años han pasado hasta el día de
+//  hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+
+function calcularAnios (fecha){
+    var fechaHoy = new Date().getTime() //getTime imprime la fecha en milisegundos
+    var hoyMenosFecha = fechaHoy - fecha.getTime(); //esta en milisegundos
+    aniosEnMilisegundos = 1000*60*60*24*365
+    aniosHumanos = Math.floor(hoyMenosFecha / aniosEnMilisegundos);
+}
+// 18) Programa una función que dada una cadena de texto cuente
+//  el número de vocales y consonantes, pe. miFuncion("Hola Mundo") 
+//  devuelva Vocales: 4, Consonantes: 5.
+function contarLetras(str){
+    let vocales = 0;
+    let consonantes = 0;
+
+    for (let letra of str){
+        if (/[aeiou]/.test(letra)){
+            vocales ++;
+        }
+
+        if (/[bcdfghjklmnpqrstvwxyz]/.test(letra)){
+            consonantes ++;
+        }
+                
+    }
+    return vocales;
+    return consonantes; 
+}
+
+
+
+
+// 19) Programa una función que valide que un texto sea un nombre 
+// válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+
+function ValidarNombre (nombre){
+    let expReg = /^[A-Za-z]+$/g.test(nombre);
+    return expReg
+    if expReg ('"$(nombre)", es un nombre valido'){
+
+    }else ('"$(nombre)",NO es un nombre valido')
+}
+
+
+// 21) Programa una función que dado un array numérico devuelve otro array 
+// con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+function (numero){
+    var elevadoAlCuadrado = [];
+    for (var i = 0; i < numero.length; i++){
+        elevadoAlCuadrado  = Math.pow(numero[i],2)
+    }
+    return elevadoAlCuadrado;
+}
+
+// 22) Programa una función que dado un array devuelva el número mas alto 
+// y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+function minMax(arr){
+    let max = arr[0];
+    let min = arr[0];
+
+    for(var i = 0; i < arr.length; i++){
+        if( arr[i]< min){
+            min = arr[i]
+        }else (arr[i] > max){
+            max = arr[i]
+        }
+    }
+    return [max, min]
+}
+console.log(minMax([22,3,24,55]));
+
+// otra opcion 
+
+function minMax(arr){
+    let max = Math.max(...arr);
+    let min = Math.min(...arr);
+
+    return [max, min]
+}
+
+console.log(minMax([22,3,24,55]));
+
+
+
+// 23) Programa una función que dado un array de números devuelva un objeto con 2 
+// arreglos en el primero almacena los números pares y en el segundo los impares, 
+// pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
+
+function parEImpar (arr){
+    let par = [];
+    let impar = [];
+
+    for(var i = 0 ; i < arr.length; i++){
+        if( arr[i] % 2 === 0){
+             par.push(arr[i])
+        }else {
+            impar.push(arr[i])
+        }
+    }
+    return [par,impar];
+}
+console.log(parEImpar([1,22,3,4,5,6,7,48,9,0]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -16,9 +16,9 @@ function soloNumeros(array) {
     if ( typeof(array[i]) === 'number'){
       soloNumeros.push(array[i]);
     }
-    return soloNumeros;
+    
   }
-  
+  return soloNumeros;
 
 } 
   

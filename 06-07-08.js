@@ -20,7 +20,7 @@ function crearClasePersona() {
   }
 }
 
-    addFriend(nombre, edad) {
+    addFriend(nombre, edad){
       // El método 'addFriend' recibe un string 'nombre' y un entero 'edad' y debe agregar un objeto:
       // { nombre: nombre, edad: edad} al arreglo de amigos de la persona.
       // No debe retornar nada.
@@ -29,17 +29,17 @@ function crearClasePersona() {
       var NuevoAmigo = {nombre : nombre, edad: edad}
       this.amigos.push(NuevoAmigo);
          
-      }
+      };
 
-    addHobby(hobby) {
+    addHobby(hobby){
       // El método 'addHobby' recibe un string 'hobby' y debe agregarlo al arreglo de hobbies de la persona.
       // No debe retornar nada.
 
       // Tu código aca:
-      var hobby = {hobby: hobby};
       this.hobbies.push(hobby);
 
-    }
+    };
+
     getFriends() {
       // El método 'getFriends' debe retornar un arreglo con sólo los nombres del arreglo de amigos
       // de la persona.
@@ -83,10 +83,12 @@ function crearClasePersona() {
      var edad = this.amigos.map(function(elemento){
       return elemento.edad;
      })
-     
+
+     var initialValue = 0;
      var sumaEdad = edad.reduce(function(acc,elemento){
-      return acc + elemento;
-     })
+      return acc + elemento, initialValue
+     });
+     
      return sumaEdad / edad.length;
       
       
